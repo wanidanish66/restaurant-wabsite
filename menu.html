@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Bites - Restaurant Menu</title>
+    <link rel="stylesheet" href="assets/css/stylem.css">
+</head>
+
+<body>
+    <header>
+        <h1>Eden's Bite</h1>
+        <p class="tagline">Where every bite is a burst of color and flavor!</p>
+        <div class="cart-icon" id="cartIcon">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </header>
+
+    <div class="menu-container">
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="main-course">Main Course</button>
+            <button class="tab-btn" data-category="fast-food">Fast Food</button>
+            <button class="tab-btn" data-category="shakes">Shakes</button>
+            <button class="tab-btn" data-category="coffee">Coffee</button>
+        </div>
+
+        <div class="menu-category active" id="main-course">
+            <div class="menu-items">
+                <!-- Main Course Items -->
+                <div class="menu-item" data-id="1" data-name="Rainbow Risotto" data-price="499">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Rainbow Risotto" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Rainbow Risotto</span>
+                        <span class="item-price">₹499</span>
+                    </div>
+                    <div class="item-desc">Creamy arborio rice with seasonal vegetables in a vibrant array of colors.
+                    </div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="2" data-name="Sunshine Paella" data-price="599">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Sunshine Paella" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Sunshine Paella</span>
+                        <span class="item-price">₹599</span>
+                    </div>
+                    <div class="item-desc">Saffron-infused rice with seafood, chicken, and colorful bell peppers.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="3" data-name="Electric Orange Salmon" data-price="699">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Electric Orange Salmon" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Electric Orange Salmon</span>
+                        <span class="item-price">₹699</span>
+                    </div>
+                    <div class="item-desc">Grilled salmon with a citrus glaze, served with rainbow chard.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="4" data-name="Neon Noodles" data-price="399">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Neon Noodles" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Neon Noodles</span>
+                        <span class="item-price">₹399</span>
+                    </div>
+                    <div class="item-desc">Colorful vegetable noodles with a spicy peanut sauce.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="5" data-name="Purple Power Bowl" data-price="499">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Purple Power Bowl" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Purple Power Bowl</span>
+                        <span class="item-price">₹499</span>
+                    </div>
+                    <div class="item-desc">Quinoa base with purple cabbage, beets, and tahini dressing.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="6" data-name="Green Galaxy Burger" data-price="349">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Green Galaxy Burger" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Green Galaxy Burger</span>
+                        <span class="item-price">₹349</span>
+                    </div>
+                    <div class="item-desc">Veggie patty with avocado, spinach, and wasabi mayo on a black bun.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="7" data-name="Technicolor Tacos" data-price="349">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Technicolor Tacos" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Technicolor Tacos</span>
+                        <span class="item-price">₹349</span>
+                    </div>
+                    <div class="item-desc">Three corn tortillas filled with colorful slaw and your choice of protein.
+                    </div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="8" data-name="Pink Pasta Primavera" data-price="449">
+                    <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Pink Pasta Primavera" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Pink Pasta Primavera</span>
+                        <span class="item-price">₹449</span>
+                    </div>
+                    <div class="item-desc">Beetroot-infused pasta with spring vegetables in a light cream sauce.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="9" data-name="Golden Curry" data-price="399">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Golden Curry" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Golden Curry</span>
+                        <span class="item-price">₹399</span>
+                    </div>
+                    <div class="item-desc">Turmeric-rich curry with potatoes, carrots, and chickpeas.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="10" data-name="Blue Lagoon Pizza" data-price="599">
+                    <img src="https://images.unsplash.com/photo-1561350111-7daa4f284bc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Blue Lagoon Pizza" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Blue Lagoon Pizza</span>
+                        <span class="item-price">₹599</span>
+                    </div>
+                    <div class="item-desc">Artisan crust with spirulina-infused cheese and colorful toppings.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category" id="fast-food">
+            <div class="menu-items">
+                <!-- Fast Food Items -->
+                <div class="menu-item" data-id="11" data-name="Electric Cheeseburger" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Electric Cheeseburger" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Electric Cheeseburger</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Classic cheeseburger with neon orange cheese and colorful fixings.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="12" data-name="Rainbow Hot Dog" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Rainbow Hot Dog" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Rainbow Hot Dog</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">All-beef frank with colorful relish and sauces.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="13" data-name="Glow-in-the-Dark Fries" data-price="149">
+                    <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Glow-in-the-Dark Fries" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Glow-in-the-Dark Fries</span>
+                        <span class="item-price">₹149</span>
+                    </div>
+                    <div class="item-desc">Crispy fries dusted with edible glitter and served with rainbow dips.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="14" data-name="Neon Chicken Nuggets" data-price="229">
+                    <img src="https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Neon Chicken Nuggets" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Neon Chicken Nuggets</span>
+                        <span class="item-price">₹229</span>
+                    </div>
+                    <div class="item-desc">Bite-sized chicken pieces with colorful breading.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="15" data-name="Purple Potato Tots" data-price="129">
+                    <img src="https://images.unsplash.com/photo-1606755456206-b25206bfde43?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Purple Potato Tots" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Purple Potato Tots</span>
+                        <span class="item-price">₹129</span>
+                    </div>
+                    <div class="item-desc">Crispy purple potato bites with spicy aioli.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="16" data-name="Tie-Dye Tacos" data-price="229">
+                    <img src="https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Tie-Dye Tacos" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Tie-Dye Tacos</span>
+                        <span class="item-price">₹229</span>
+                    </div>
+                    <div class="item-desc">Colorful tortillas filled with seasoned beef and vibrant toppings.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="17" data-name="Electric Onion Rings" data-price="149">
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Electric Onion Rings" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Electric Onion Rings</span>
+                        <span class="item-price">₹149</span>
+                    </div>
+                    <div class="item-desc">Crispy onion rings with a bright blue batter.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="18" data-name="Pink Slider Trio" data-price="299">
+                    <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Pink Slider Trio" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Pink Slider Trio</span>
+                        <span class="item-price">₹299</span>
+                    </div>
+                    <div class="item-desc">Three mini beet-colored buns with beef, chicken, and veggie options.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="19" data-name="Green Machine Wrap" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1606755456206-b25206bfde43?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Green Machine Wrap" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Green Machine Wrap</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Spinach tortilla filled with grilled chicken and avocado.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="20" data-name="Golden Corn Dogs" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Golden Corn Dogs" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Golden Corn Dogs</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Turmeric-infused corn batter with juicy hot dogs.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category" id="shakes">
+            <div class="menu-items">
+                <!-- Shake Items -->
+                <div class="menu-item" data-id="21" data-name="Unicorn Dream Shake" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Unicorn Dream Shake" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Unicorn Dream Shake</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Vanilla base with swirls of pink, blue, and purple.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="22" data-name="Electric Blueberry" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Electric Blueberry" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Electric Blueberry</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Blueberry and vanilla with a vibrant blue hue.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="23" data-name="Pink Flamingo" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Pink Flamingo" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Pink Flamingo</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Strawberry and coconut with pink dragonfruit.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="24" data-name="Green Goblin" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Green Goblin" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Green Goblin</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Matcha and mint with spinach for extra green power.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="25" data-name="Sunshine Citrus" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Sunshine Citrus" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Sunshine Citrus</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Orange, mango, and turmeric for a golden glow.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="26" data-name="Purple Haze" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1530006263895-2f150d6b9f0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Purple Haze" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Purple Haze</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Blackberry, blueberry, and acai blend.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="27" data-name="Neon Peach" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Neon Peach" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Neon Peach</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Peach and passionfruit with a bright orange color.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="28" data-name="Rainbow Sherbet" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Rainbow Sherbet" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Rainbow Sherbet</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Layers of orange, lime, and raspberry sherbet.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="29" data-name="Lavender Love" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Lavender Love" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Lavender Love</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Lavender-infused vanilla with edible flowers.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="30" data-name="Red Velvet" data-price="249">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Red Velvet" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Red Velvet</span>
+                        <span class="item-price">₹249</span>
+                    </div>
+                    <div class="item-desc">Creamy chocolate with a vibrant red hue.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category" id="coffee">
+            <div class="menu-items">
+                <!-- Coffee Items -->
+                <div class="menu-item" data-id="31" data-name="Electric Espresso" data-price="129">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Electric Espresso" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Electric Espresso</span>
+                        <span class="item-price">₹129</span>
+                    </div>
+                    <div class="item-desc">Strong shot with colorful latte art.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="32" data-name="Rainbow Latte" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1510707577719-3e6a5d6e30d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Rainbow Latte" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Rainbow Latte</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Layered latte with natural food colors.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="33" data-name="Purple Mocha" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1510707577719-3e6a5d6e30d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Purple Mocha" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Purple Mocha</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Ube-flavored mocha with purple whipped cream.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="34" data-name="Green Tea Matchaccino" data-price="199">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Green Tea Matchaccino" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Green Tea Matchaccino</span>
+                        <span class="item-price">₹199</span>
+                    </div>
+                    <div class="item-desc">Frothy matcha with espresso shots.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-id="35" data-name="Golden Turmeric Latte" data-price="149">
+                    <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="Golden Turmeric Latte" class="item-image">
+                    <div class="item-header">
+                        <span class="item-name">Golden Turmeric Latte</span>
+                        <span class="item-price">₹149</span>
+                    </div>
+                    <div class="item-desc">Spiced turmeric milk with a hint of coffee.</div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="overlay" id="overlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-total" id="cartTotal">
+            Total: ₹0.00
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        Item added to cart!
+    </div>
+
+    <footer>
+        <p>© 2023 Vibrant Bites | Open 11AM-10PM Daily</p>
+    </footer>
+
+    <script src="assets/js/menu.js"></script>
+</body>
+
+</html>
